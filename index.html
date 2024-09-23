@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-5</title>
+    <!-- tailwind and daisy Ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind cdn  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- google font cdn  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style  -->
+    <style>
+      .font-lexend {
+        font-family: "Lexend", system-ui;
+      }
+    </style>
+  </head>
+  <body class="font-lexend bg-gray-100">
+    <header class="w-11/12 lg:w-10/12 mx-auto p-5 pb-11">
+      <nav class="grid grid-cols-3 text-xl">
+        <!-- 1  -->
+        <div class="">
+          <button class="btn lg:text-2xl text-lg bg-green-500 text-white">
+            Blog
+          </button>
+        </div>
+        <!-- 2  -->
+        <div class="col-span-2 lg:col-span-1 mt-1">
+          <div class="flex justify-end lg:justify-center">
+            <div class="flex justify-center items-center gap-3">
+              <img src="./assets/logo.png" alt="" class="w-9 h-9" />
+              <h2 class="lg:text-2xl text-lg font-semibold">
+                Donate Bangladesh
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- 3  -->
+        <div
+          class="col-span-3 lg:col-span-1 flex justify-center lg:justify-end mt-12 lg:mt-0"
+        >
+          <div class="flex justify-end gap-5">
+            <div>
+              <img
+                src="./assets/coin.png"
+                alt=""
+                class="w-12 h-12 lg:w-9 lg:h-9"
+              />
+            </div>
+            <div class="font-medium text-5xl lg:text-xl">
+              <h2>5500 <span>BDT</span></h2>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-white">
+      <!-- Button section stats -->
+      <section class="w-11/12 lg:w-10/12 mx-auto p-5 pt-12">
+        <div class="flex justify-center gap-5">
+          <button class="btn px-6 text-lg lg:text-xl">Donation</button>
+          <button class="btn px-6 text-lg lg:text-xl">History</button>
+        </div>
+      </section>
+      <!-- Button section ends -->
+      <!-- card section starts -->
+      <!-- card-1 -->
+      <div class="border-2 p-5">
+        <div><img src="./assets/noakhali.png" alt="" /></div>
+        <div><button class="btn"></button></div>
+      </div>
+      <!-- card-2 -->
+
+      <!-- card-3 -->
+
+      <!-- card section ends -->
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

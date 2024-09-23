@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute Centered Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200">
+    <nav class="w-11/12 lg:w-10/12 mx-auto">
+      <header class="grid grid-cols-3 p-5 text-xl">
+        <!-- 1  -->
+        <div class="bg-red-500">b</div>
+        <!-- 2  -->
+        <div class="col-span-2 lg:col-span-1">
+          <div class="flex justify-end lg:justify-center">
+            <div class="flex justify-center items-center gap-3">
+              <img src="./assets/logo.png" alt="" class="w-9 h-9" />
+              <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
+            </div>
+          </div>
+        </div>
+        <!-- 3  -->
+        <div
+          class="col-span-3 lg:col-span-1 flex justify-center lg:justify-end mt-12 lg:mt-0"
+        >
+          <div class="flex justify-end gap-5">
+            <div>
+              <img
+                src="./assets/coin.png"
+                alt=""
+                class="w-12 h-12 lg:w-9 lg:h-9"
+              />
+            </div>
+            <div class="font-medium text-5xl lg:text-xl">
+              <h2>5500 <span>BDT</span></h2>
+            </div>
+          </div>
+        </div>
+      </header>
+    </nav>
+  </body>
+</html>
