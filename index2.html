@@ -43,16 +43,16 @@
     </style>
   </head>
   <body class="font-lexend bg-background">
-    <header class="sticky top-0 pb-2 backdrop-filter backdrop-blur-lg">
+    <header class="sticky top-0 pb-2 backdrop-filter backdrop-blur-lg z-50">
       <nav
         class="w-11/12 lg:max-w-screen-xl mx-auto flex justify-between lg:px-12 items-center bg-background bg-opacity-40 py-4"
       >
         <div>
           <button
-            id="blog-btn"
+            id="home-btn"
             class="bg-button text-primary text-lg px-6 py-3 rounded-lg"
           >
-            blog
+            Home
           </button>
         </div>
         <div class="flex items-center gap-2">
@@ -68,161 +68,82 @@
           </p>
         </div>
       </nav>
-      <div class="flex items-center justify-center gap-4 my-7">
-        <button
-          id="donation-btn"
-          class="text-xl font-semibold text-primary px-6 py-2 border bg-button rounded-lg"
-        >
-          Donation
-        </button>
-        <button
-          id="history-btn"
-          class="text-lg font-semibold text-primary px-6 py-2 border rounded-lg"
-        >
-          History
-        </button>
-      </div>
     </header>
 
     <main class="bg-white pt-12">
-      <!-- card section starts -->
-      <section
-        id="card-section"
-        class="w-11/12 lg:max-w-screen-xl mx-auto pt-5 pb-16 lg:px-12 space-y-5"
-      >
-        <!-- card-1 -->
-        <div class="border-2 lg:flex p-6 rounded-2xl mx-auto gap-8">
-          <div class="lg:w-1/2">
-            <img src="./assets/noakhali.png" alt="" class="w-full" />
+      <!-- Faq section starts -->
+      <div class="w-11/12 lg:max-w-screen-xl mx-auto lg:px-12 pb-12">
+        <h2 class="text-3xl font-bold flex items-center my-10 text-center">
+          Important FAQ..
+        </h2>
+        <div class="collapse collapse-arrow bg-base-200 p-6 mb-5">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model(DOM)?
           </div>
-          <div class="lg:w-1/2 space-y-4">
-            <button class="btn mt-4 lg:mt-0">
-              <img src="./assets/coin.png" alt="" />
-              <p>
-                <span id="total-amount-for-noakhali">0</span> <span> BDT</span>
-              </p>
-            </button>
-            <h3 class="lg:text-xl text-lg font-bold">
-              Donate for Flood at Noakhali, Bangladesh
-            </h3>
-            <p class="text-sm lg:text-[16px] lg:leading-7">
-              The recent floods in Noakhali have caused significant damage to
-              homes infrastructure. Your donation will help provide essential
-              supplies and to those affected by this disaster. Every
-              contribution, big or small, makes difference. Please join us in
-              supporting the relief efforts and making a positive impact on the
-              lives of those in need.
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is a programming interface for web
+              documents. It defines the logical structure of documents and the
+              way a document is accessed and manipulated. In the DOM
+              specification, the term "document" is used in the broad sense -
+              increasingly, XML is being used as a way of representing many
+              different kinds of information that may be stored in diverse
+              systems, and much of this would traditionally be seen as data
+              rather than as documents.
             </p>
-            <input
-              id="donate-amount-n"
-              type="text"
-              placeholder="Write Donation Amount"
-              class="input input-bordered w-full"
-            />
-            <button id="btn-donate-noakhali" class="btn w-full bg-button">
-              Donate Now
-            </button>
           </div>
         </div>
-        <!-- card-2 -->
-        <div class="border-2 lg:flex p-6 rounded-2xl mx-auto gap-8">
-          <div class="lg:w-1/2">
-            <img src="./assets/feni.png" alt="" class="w-full" />
+        <div class="collapse collapse-arrow bg-base-200 p-6 mb-5">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
           </div>
-          <div class="lg:w-1/2 space-y-4">
-            <button class="btn mt-4 lg:mt-0">
-              <img src="./assets/coin.png" alt="" />
-              <p><span id="total-amount-for-feni">0</span> <span> BDT</span></p>
-            </button>
-            <h3 class="lg:text-xl text-lg font-bold">
-              Donate for Flood Relief in Feni,Bangladesh
-            </h3>
-            <p class="text-sm lg:text-[16px] lg:leading-7">
-              The recent floods in Feni have devastated local communities,
-              leading to severe disruption and loss. Your generous donation will
-              help provide immediate aid, including food, clean water, and
-              medical supplies, to those affected by this calamity. Together, we
-              can offer crucial support and help rebuild lives in the aftermath
-              of this disaster. Every contribution counts towards making a real
-              difference. Please consider donating today to assist those in
-              urgent need.
+          <div class="collapse-content">
+            <p>
+              Selecting DOM (Document Object Model) elements is a fundamental
+              aspect of web development with JavaScript. It allows developers to
+              interact with and manipulate elements on a webpage dynamically.
             </p>
-            <input
-              id="donate-amount-f"
-              type="text"
-              placeholder="Write
-            Donation Amount"
-              class="input input-bordered w-full"
-            />
-            <button id="btn-donate-feni" class="btn w-full bg-button">
-              Donate Now
-            </button>
           </div>
         </div>
-        <!-- card-3 -->
-        <div class="border-2 lg:flex p-6 rounded-2xl mx-auto gap-8">
-          <div class="lg:w-1/2">
-            <img src="./assets/quota-protest.png" alt="" class="w-full" />
+        <div class="collapse collapse-arrow bg-base-200 p-6 mb-5">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            what is the event delegation in the context of the DOM, and why is
+            it useful?
           </div>
-          <div class="lg:w-1/2 space-y-4">
-            <button class="btn mt-4 lg:mt-0">
-              <img src="./assets/coin.png" alt="" />
-              <p>
-                <span id="total-amount-for-quata-movement">0</span>
-                <span> BDT</span>
-              </p>
-            </button>
-            <h3 class="lg:text-xl text-lg font-bold">
-              Aid for Injured in the Quota Movement
-            </h3>
-            <p class="text-sm lg:text-[16px] lg:leading-7">
-              The recent Quota movement has resulted in numerous injuries and
-              significant hardship for many individuals. Your support is crucial
-              in providing medical assistance, rehabilitation, and necessary
-              supplies to those affected. By contributing, you help ensure that
-              injured individuals receive the care and support they need during
-              this challenging time. Every donation plays a vital role in
-              alleviating their suffering and aiding in their recovery. Please
-              consider making a donation to support these brave individuals in
-              their time of need.
+          <div class="collapse-content">
+            <p>
+              Event delegation is a design pattern in JavaScript used to
+              efficiently manage and handle events on multiple child elements by
+              attaching a single event listener to a common ancestor element.
             </p>
-            <input
-              id="quata-movement-donate-amount"
-              type="text"
-              placeholder="Write Donation Amount"
-              class="input input-bordered w-full"
-            />
-            <button id="btn-donate-quata-movement" class="btn w-full bg-button">
-              Donate Now
-            </button>
           </div>
         </div>
-        <!-- card section ends -->
-        <!-- modals starts -->
-        <dialog id="my_modal_4" class="modal">
-          <div
-            class="modal-box w-11/12 max-w-5xl flex flex-col justify-center items-center"
-          >
-            <h3 class="text-3xl text-primary font-bold mb-4">Congrates!</h3>
-            <img src="./assets/coin.png" alt="" />
-            <p class="py-4">You Have Donated for Humankind</p>
-            <p class="font-bold text-2xl text-primary">Succesfully</p>
-            <div class="modal-action">
-              <form method="dialog">
-                <!-- if there is a button, it will close the modal -->
-                <button class="btn">close confirmation</button>
-              </form>
-            </div>
+        <div class="collapse collapse-arrow bg-base-200 p-6 mb-5">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
           </div>
-        </dialog>
-        <!-- modals end -->
-        <!-- History section starts  -->
-        <!-- history section -->
-        <section id="history-container" class="hidden space-y-6"></section>
-        <!-- History section ends -->
-      </section>
+          <div class="collapse-content">
+            <p>
+              Manipulating Element Attributes The classList object only provide
+              methods to change the class of an element. If you want to change
+              other attributes like id , href , or src , you can use the
+              setAttribute() method. The setAttribute() method accepts two
+              arguments: The name of the attribute to set..
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer class="h-32"></footer>
+    <footer class="h-32 pt-12">
+      <p class="text-center text-sm">
+        © 2024 Donate Bangladesh. All rights reserved.
+      </p>
+    </footer>
     <script src="./js/faq.js"></script>
   </body>
 </html>
