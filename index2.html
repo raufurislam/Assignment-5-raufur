@@ -1,49 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Absolute Centered Navbar</title>
+    <title>Assignment-5</title>
+    <!-- tailwind and daisy Ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind cdn  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+
+              primary: "#111111",
+              secondary: "#111111B3",
+              button: "#B4F461",
+              background: "#F9F7F3",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- google font cdn  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style  -->
     <style>
-      html,
-      body {
-        height: 100%;
+      .font-lexend {
+        font-family: "Lexend", system-ui;
       }
     </style>
   </head>
-  <body class="bg-gray-200">
-    <nav class="w-11/12 lg:w-10/12 mx-auto">
-      <header class="grid grid-cols-3 p-5 text-xl">
-        <!-- 1  -->
-        <div class="bg-red-500">b</div>
-        <!-- 2  -->
-        <div class="col-span-2 lg:col-span-1">
-          <div class="flex justify-end lg:justify-center">
-            <div class="flex justify-center items-center gap-3">
-              <img src="./assets/logo.png" alt="" class="w-9 h-9" />
-              <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
-            </div>
-          </div>
+  <body class="font-lexend bg-background">
+    <header class="sticky top-0 pb-2 backdrop-filter backdrop-blur-lg">
+      <nav
+        class="w-11/12 lg:max-w-screen-xl mx-auto flex justify-between lg:px-12 items-center bg-background bg-opacity-40 py-4"
+      >
+        <div>
+          <button
+            id="blog-btn"
+            class="bg-button text-primary text-lg px-6 py-3 rounded-lg"
+          >
+            blog
+          </button>
         </div>
-        <!-- 3  -->
-        <div
-          class="col-span-3 lg:col-span-1 flex justify-center lg:justify-end mt-12 lg:mt-0"
+        <div class="flex items-center gap-2">
+          <img class="w-[30px]" src="./assets/logo.png" alt="" />
+          <h2 class="text-primary font-bold text-lg max-sm:hidden">
+            Donate Bangladesh
+          </h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="./assets/coin.png" alt="" />
+          <p class="text-xl font-semibold">
+            <span id="my-balance">5500</span> BDT
+          </p>
+        </div>
+      </nav>
+      <div class="flex items-center justify-center gap-4 my-7">
+        <button
+          id="donation-btn"
+          class="text-xl font-semibold text-primary px-6 py-2 border bg-button rounded-lg"
         >
-          <div class="flex justify-end gap-5">
-            <div>
-              <img
-                src="./assets/coin.png"
-                alt=""
-                class="w-12 h-12 lg:w-9 lg:h-9"
-              />
-            </div>
-            <div class="font-medium text-5xl lg:text-xl">
-              <h2>5500 <span>BDT</span></h2>
-            </div>
+          Donation
+        </button>
+        <button
+          id="history-btn"
+          class="text-lg font-semibold text-primary px-6 py-2 border rounded-lg"
+        >
+          History
+        </button>
+      </div>
+    </header>
+
+    <main class="bg-white pt-12">
+      <!-- card section starts -->
+      <section
+        id="card-section"
+        class="w-11/12 lg:max-w-screen-xl mx-auto pt-5 pb-16 lg:px-12 space-y-5"
+      >
+        <!-- card-1 -->
+        <div class="border-2 lg:flex p-6 rounded-2xl mx-auto gap-8">
+          <div class="lg:w-1/2">
+            <img src="./assets/noakhali.png" alt="" class="w-full" />
+          </div>
+          <div class="lg:w-1/2 space-y-4">
+            <button class="btn mt-4 lg:mt-0">
+              <img src="./assets/coin.png" alt="" />
+              <p>
+                <span id="total-amount-for-noakhali">0</span> <span> BDT</span>
+              </p>
+            </button>
+            <h3 class="lg:text-xl text-lg font-bold">
+              Donate for Flood at Noakhali, Bangladesh
+            </h3>
+            <p class="text-sm lg:text-[16px] lg:leading-7">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <input
+              id="donate-amount-n"
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered w-full"
+            />
+            <button id="btn-donate-noakhali" class="btn w-full bg-button">
+              Donate Now
+            </button>
           </div>
         </div>
-      </header>
-    </nav>
+        <!-- card-2 -->
+        <div class="border-2 lg:flex p-6 rounded-2xl mx-auto gap-8">
+          <div class="lg:w-1/2">
+            <img src="./assets/feni.png" alt="" class="w-full" />
+          </div>
+          <div class="lg:w-1/2 space-y-4">
+            <button class="btn mt-4 lg:mt-0">
+              <img src="./assets/coin.png" alt="" />
+              <p><span id="total-amount-for-feni">0</span> <span> BDT</span></p>
+            </button>
+            <h3 class="lg:text-xl text-lg font-bold">
+              Donate for Flood Relief in Feni,Bangladesh
+            </h3>
+            <p class="text-sm lg:text-[16px] lg:leading-7">
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
+            </p>
+            <input
+              id="donate-amount-f"
+              type="text"
+              placeholder="Write
+            Donation Amount"
+              class="input input-bordered w-full"
+            />
+            <button id="btn-donate-feni" class="btn w-full bg-button">
+              Donate Now
+            </button>
+          </div>
+        </div>
+        <!-- card-3 -->
+        <div class="border-2 lg:flex p-6 rounded-2xl mx-auto gap-8">
+          <div class="lg:w-1/2">
+            <img src="./assets/quota-protest.png" alt="" class="w-full" />
+          </div>
+          <div class="lg:w-1/2 space-y-4">
+            <button class="btn mt-4 lg:mt-0">
+              <img src="./assets/coin.png" alt="" />
+              <p>
+                <span id="total-amount-for-quata-movement">0</span>
+                <span> BDT</span>
+              </p>
+            </button>
+            <h3 class="lg:text-xl text-lg font-bold">
+              Aid for Injured in the Quota Movement
+            </h3>
+            <p class="text-sm lg:text-[16px] lg:leading-7">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+            <input
+              id="quata-movement-donate-amount"
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered w-full"
+            />
+            <button id="btn-donate-quata-movement" class="btn w-full bg-button">
+              Donate Now
+            </button>
+          </div>
+        </div>
+        <!-- card section ends -->
+        <!-- modals starts -->
+        <dialog id="my_modal_4" class="modal">
+          <div
+            class="modal-box w-11/12 max-w-5xl flex flex-col justify-center items-center"
+          >
+            <h3 class="text-3xl text-primary font-bold mb-4">Congrates!</h3>
+            <img src="./assets/coin.png" alt="" />
+            <p class="py-4">You Have Donated for Humankind</p>
+            <p class="font-bold text-2xl text-primary">Succesfully</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button, it will close the modal -->
+                <button class="btn">close confirmation</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        <!-- modals end -->
+        <!-- History section starts  -->
+        <!-- history section -->
+        <section id="history-container" class="hidden space-y-6"></section>
+        <!-- History section ends -->
+      </section>
+    </main>
+    <footer class="h-32"></footer>
+    <script src="./js/utility.js"></script>
+    <script src="./js/donate.js"></script>
+    <script src="./js/tougle.js"></script>
   </body>
 </html>
