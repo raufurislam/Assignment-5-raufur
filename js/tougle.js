@@ -1,5 +1,5 @@
-const historyBtn = document.getElementById("history-btn");
 const donationBtn = document.getElementById("donation-btn");
+const historyBtn = document.getElementById("history-btn");
 const cartSection = document.getElementById("card-section");
 
 historyBtn.addEventListener("click", function () {
