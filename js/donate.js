@@ -31,7 +31,6 @@ document
     <div class="border p-6 w-3/4 mx-auto rounded-lg space-y-2">
     <p class="text-semibold text-primary">${donateNoakhaliValue} Taka is Donated for Flood Relif in Noakhali, Bangladesh</p>
     <p>${new Date().toString()}</p>
-    
     </div>
     `;
   });
@@ -63,7 +62,6 @@ document
     <div class="border p-6 w-3/4 mx-auto rounded-lg space-y-2">
     <p class="text-semibold text-primary">${donateFeniValue} Taka is Donated for Flood Relif in Feni, Bangladesh</p>
     <p>${new Date().toString()}</p>
-
     </div>
     `;
   });
@@ -96,11 +94,11 @@ document
 
     const dialog = document.getElementById("my_modal_4");
     dialog.showModal();
+
     document.getElementById("history-container").innerHTML += `
 <div class="border p-6 w-3/4 mx-auto rounded-lg space-y-2">
 <p class="text-semibold text-primary">${donateQuataMovementValue} Taka is Donated for Aid for Injured in the Quata Movement, Bangladesh</p>
 <p>${new Date().toString()}</p>
-
 </div>
 `;
   });
